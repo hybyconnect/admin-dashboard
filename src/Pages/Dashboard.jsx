@@ -186,7 +186,7 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="flex-1 p-8  bg-gray-100">
         <div className="mb-4 flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-black-400">Hi, Welcome Back!</h1>
+          <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-yellow-500">Hi, Welcome Back!</h1>
         </div>
 
         {/* First Row of Cards */}

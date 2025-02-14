@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import SignupPage from "./Pages/SignupPage";
 import assets from "./assets/assets";
 import Dashboard from "./Pages/Dashboard";
-import Sidebar from "./Components/Sidebar";
-import Ashboard from "./Pages/Ashboard";
+
 
 import Users from "./Pages/Users";
 import Test from "./Pages/Test";
@@ -15,9 +14,8 @@ import Transactions from "./Pages/Transactions";
 import Projects from "./Pages/Projects";
 import Report from "./Pages/Report";
 import Withdrawals from "./Pages/Withdrawals";
-
-
-
+import Profile from "./Pages/Profile";
+import Setting from "./Pages/Setting";
 
 
 
@@ -78,6 +76,8 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/reports" element={<Report />} />
           <Route path="/withdrawals" element={<Withdrawals />} />
+          <Route path = "/profile" element = {<Profile />} />
+          <Route path="/settings" element={<Setting />} />
           
 
         </Routes>

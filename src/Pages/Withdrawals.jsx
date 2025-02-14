@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { HiHome, HiUsers, HiPhotograph, HiFolder, HiCurrencyDollar, HiChartBar, HiArrowCircleUp, HiUserCircle, HiCog, HiLogout, HiMenu, HiX } from "react-icons/hi";
+import { MdReportGmailerrorred } from "react-icons/md";
+
 import { NavLink } from "react-router-dom";
 import assets from '../assets/assets';
 
@@ -40,40 +42,133 @@ const Withdrawals = () => {
                     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
                 } transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:block`}
             >
-                <div className="mb-8 ml-4">
-                    <img src={assets.logo} className="text-2xl ml-8 md:ml-0 font-bold text-gray-700" alt="Logo" />
+                <div className="mb-8">
+                    <img src={assets.logo} alt="logo" className="text-2xl ml-8 font-bold text-gray-700"/>
                 </div>
                 <nav>
                     <ul className="space-y-6">
-                        {[
-                            { to: "/dashboard", icon: <HiHome />, text: "Dashboard" },
-                            { to: "/users", icon: <HiUsers />, text: "Users" },
-                            { to: "/banners", icon: <HiPhotograph />, text: "Banners" },
-                            { to: "/projects", icon: <HiFolder />, text: "Projects" },
-                            { to: "/transactions", icon: <HiCurrencyDollar />, text: "Transactions" },
-                            { to: "/reports", icon: <HiChartBar />, text: "Reports" },
-                            { to: "/withdrawals", icon: <HiArrowCircleUp />, text: "Withdrawals" },
-                            { to: "/profile", icon: <HiUserCircle />, text: "Profile" },
-                            { to: "/settings", icon: <HiCog />, text: "Settings" },
-                        ].map((link) => (
-                            <li key={link.to}>
-                                <NavLink
-                                    to={link.to}
-                                    className={({ isActive }) =>
-                                        `flex items-center gap-2 pl-4 ${
-                                            isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
-                                        }`
-                                    }
-                                >
-                                    {link.icon}
-                                    <span>{link.text}</span>
-                                </NavLink>
-                            </li>
-                        ))}
+                        <li>
+                            <NavLink
+                                to="/dashboard"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiHome className="w-5 h-5" />
+                                <span>Dashboard</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/users"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiUsers className="w-5 h-5" />
+                                <span>Users</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/banners"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiPhotograph className="w-5 h-5" />
+                                <span>Banners</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/projects"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiFolder className="w-5 h-5" />
+                                <span>Projects</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/transactions"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiCurrencyDollar className="w-5 h-5" />
+                                <span>Transactions</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/reports"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiChartBar className="w-5 h-5" />
+                                <span>Reports</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/withdrawals"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiArrowCircleUp className="w-5 h-5" />
+                                <span>Withdrawals</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/profile"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiUserCircle className="w-5 h-5" />
+                                <span>Profile</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/settings"
+                                className={({ isActive }) =>
+                                    `flex items-center gap-2 cursor-pointer ${
+                                        isActive ? "text-yellow-500" : "text-gray-700 hover:text-blue-500"
+                                    }`
+                                }
+                            >
+                                <HiCog className="w-5 h-5" />
+                                <span>Settings</span>
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl mt-8 w-full flex items-center justify-center">
-                    <HiLogout className="mr-2" /> Log Out
+                    <HiLogout className="mr-2" />
+                    Log Out
                 </button>
             </aside>
 
@@ -110,7 +205,7 @@ const Withdrawals = () => {
 
                 {/* Withdrawals Table */}
                 <div className="bg-white shadow-md rounded-2xl p-4 overflow-x-auto">
-                    <table className="w-full table-auto ">
+                    <table className=" w-full table-auto ">
                         <thead>
                             <tr className="bg-yellow-400 text-left h-[70px]  text-gray-800 rounded-xl">
                                 <th className="p-2">S.No</th>
@@ -144,8 +239,9 @@ const Withdrawals = () => {
                                                     Approve
                                                 </button>
                                                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded whitespace-nowrap">
-                                                    Reject
+                                                    Reject 
                                                 </button>
+                                                <MdReportGmailerrorred  className = "text-3xl text-yellow-400"/>
                                             </div>
                                         )}
                                     </td>

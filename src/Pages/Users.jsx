@@ -31,15 +31,15 @@ const UsersPanel = () => {
   ];
 
   const userList = [
-    { id: "26546588", name: "Jakob Torff", email: "swalker@gmail.com", location: "Rajasthan, Jodhpur", status: "Active", type: "Influencer" },
-    { id: "46845335", name: "Ruben Donin", email: "jgonalez@aol.com", location: "Haryana, Rohtak", status: "Blocked", type: "Brand" },
-    { id: "151321241", name: "Gustavo Stanton", email: "ibrown@gmail.com", location: "Bihar, Patna", status: "Offline", type: "Influencer" },
-    { id: "121325457", name: "Zain Vaccaro", email: "llopez@outlook.com", location: "Maharashtra, Mumbai", status: "Offline", type: "Brand" },
-    { id: "154678463", name: "Jakob Schleifer", email: "dflores@yahoo.com", location: "Utter Pradesh, Agra", status: "Active", type: "Brand" },
-    { id: "46845335", name: "Ruben Donin", email: "jgonalez@aol.com", location: "Haryana, Rohtak", status: "Blocked", type: "Brand" },
-    { id: "151321241", name: "Gustavo Stanton", email: "ibrown@gmail.com", location: "Bihar, Patna", status: "Offline", type: "Influencer" },
-    { id: "121325457", name: "Zain Vaccaro", email: "llopez@outlook.com", location: "Maharashtra, Mumbai", status: "Offline", type: "Brand" },
-    { id: "154678463", name: "Jakob Schleifer", email: "dflores@yahoo.com", location: "Utter Pradesh, Agra", status: "Active", type: "Brand" },
+    { id: "26546588", name: "Jakob Torff", email: "swalke3r@gmail.com", location: "Rajasthan, Jodhpur", status: "Active", type: "Influencer" },
+    { id: "468453335", name: "Ruben Donin", email: "jgona3lez@aol.com", location: "Haryana, Rohtak", status: "Blocked", type: "Brand" },
+    { id: "1513231241", name: "Gustavo Stanton", email: "ibro3wn@gmail.com", location: "Bihar, Patna", status: "Offline", type: "Influencer" },
+    { id: "1213235457", name: "Zain Vaccaro", email: "llopez@outlook.com", location: "Maharashtra, Mumbai", status: "Offline", type: "Brand" },
+    { id: "1546738463", name: "Jakob Schleifer", email: "dflo3res@yahoo.com", location: "Utter Pradesh, Agra", status: "Active", type: "Brand" },
+    { id: "468453353", name: "Ruben Donin", email: "jgona3lez@aol.com", location: "Haryana, Rohtak", status: "Blocked", type: "Brand" },
+    { id: "151321249", name: "Gustavo Stanton", email: "ibr3owvn@gmail.com", location: "Bihar, Patna", status: "Offline", type: "Influencer" },
+    { id: "121325459", name: "Zain Vaccaro", email: "llo3pvez@outlook.com", location: "Maharashtra, Mumbai", status: "Offline", type: "Brand" },
+    { id: "154678469", name: "Jakob Schleifer", email: "df3lorves@yahoo.com", location: "Utter Pradesh, Agra", status: "Active", type: "Brand" },
   ];
 
   const filteredUsers = userList.filter(
@@ -203,7 +203,7 @@ const UsersPanel = () => {
       {/* Main Content */}
       <div className="flex-1 p-8 bg-gray-200">
         <div className="mb-8 flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-black-400"> Users Panel</h1>
+          <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-yellow-500"> Users Panel</h1>
           
         </div>
 

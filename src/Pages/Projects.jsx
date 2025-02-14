@@ -174,7 +174,7 @@ const Projects = () => {
       <div className="flex-1 p-8 bg-gray-200">
         {/* Header */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <h1 className="text-3xl font-bold ml-8 md:ml-0 text-yellow-500">Transactions</h1>
+            <h1 className="text-3xl font-bold ml-8 md:ml-0 text-yellow-500">Projects</h1>
             <select
                 value={dropdownValue}
                 onChange={handleDropdownChange}
