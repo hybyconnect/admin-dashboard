@@ -169,7 +169,7 @@ const BannerPage = () => {
       <div className="flex-1 p-8 bg-gray-200 rounded-xl">
         {/* Header */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <h1 className="text-3xl font-bold text-yellow-400 mb-2 ml-8 md:ml-0 md:mb-0">Banners</h1>
+          <h1 className="text-3xl font-bold text-yellow-500 mb-2 ml-8 md:ml-0 md:mb-0">Banners</h1>
           
         </div>
 
