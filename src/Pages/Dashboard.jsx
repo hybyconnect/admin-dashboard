@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Pie } from "react-chartjs-2";
 import {
   HiHome,
   HiUsers,
@@ -21,15 +21,24 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  ArcElement,
 } from "chart.js";
 import assets from "../assets/assets";
 import { NavLink } from "react-router-dom";
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+  ArcElement
+);
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for mobile sidebar
 
+  // Bar chart data
   const chartData = {
     labels: ["24-Jan-2025", "25-Jan-2025", "26-Jan-2025", "27-Jan-2025", "28-Jan-2025", "29-Jan-2025", "30-Jan-2025"],
     datasets: [
@@ -38,6 +47,18 @@ const Dashboard = () => {
         data: [7000, 5000, 6000, 4000, 4500, 5000, 5500],
         backgroundColor: "#f5e020",
         borderRadius: 8,
+      },
+    ],
+  };
+
+  // Pie chart data
+  const pieData = {
+    labels: ["New Influencers", "New Brands", "Fire Top Ups", "Withdrawal Requests"],
+    datasets: [
+      {
+        data: [132, 12, 28, 18],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+        hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
       },
     ],
   };
@@ -184,7 +205,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <div className="flex-1 p-8  bg-gray-100">
+      <div className="flex-1 p-8 bg-gray-100">
         <div className="mb-4 flex justify-between items-center">
           <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-yellow-500">Hi, Welcome Back!</h1>
         </div>
@@ -237,29 +258,57 @@ const Dashboard = () => {
             <Bar data={chartData} />
           </div>
 
-          
-
-          {/* Today's Stats */}
+          {/* Today's Stats with Pie Chart */}
           <div className="w-full md:w-1/3 bg-white p-6 shadow-md rounded-2xl">
             <h2 className="text-xl font-semibold text-gray-700 mb-4">Today</h2>
+            
+            {/* Pie Chart */}
+            <div className="h-48 mb-6">
+              <Pie 
+                data={pieData}
+                options={{
+                  plugins: {
+                    legend: {
+                      display: false,
+                    },
+                  },
+                }}
+              />
+            </div>
+
+            {/* Stats List with Color Coding */}
             <ul className="space-y-4">
-              <li className="flex justify-between text-gray-600">
-                <span>New Influencers</span>
+              <li className="flex justify-between items-center text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#FF6384]"></span>
+                  <span>New Influencers</span>
+                </div>
                 <span>(132)</span>
               </li>
-              <li className="flex justify-between text-gray-600">
-                <span>New Brands</span>
+              <li className="flex justify-between items-center text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#36A2EB]"></span>
+                  <span>New Brands</span>
+                </div>
                 <span>(12)</span>
               </li>
-              <li className="flex justify-between text-gray-600">
-                <span>Fire Top Ups</span>
+              <li className="flex justify-between items-center text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#FFCE56]"></span>
+                  <span>Fire Top Ups</span>
+                </div>
                 <span>(28)</span>
               </li>
-              <li className="flex justify-between text-gray-600">
-                <span>Withdrawal Requests</span>
+              <li className="flex justify-between items-center text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#4BC0C0]"></span>
+                  <span>Withdrawal Requests</span>
+                </div>
                 <span>(18)</span>
               </li>
             </ul>
+
+            {/* Earnings Section */}
             <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-sm text-gray-600">
               <span>Earnings</span>
               <div className="flex items-center gap-1">
