@@ -194,7 +194,7 @@ const UsersPanel = () => {
             </li>
           </ul>
         </nav>
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl mt-8 w-full flex items-center justify-center">
+        <button className="bg-red-500 mt-90 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl mt-8 w-full flex items-center justify-center">
           <HiLogout className="mr-2" />
           Log Out
         </button>
@@ -205,7 +205,7 @@ const UsersPanel = () => {
         <div className="mb-8 flex justify-between items-center">
           <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-yellow-500"> Users Panel</h1>
           <div className="flex items-center gap-4">
-            <img src={assets.profile} alt="Profile" className="w-10 h-10 rounded-full object-cover" />
+            <img src={assets.profile} alt="Profile" className="w-10 h-10 md:w-20 md:h-20 rounded-full object-cover" />
             <h2 className="text-lg font-semibold text-gray-700">Admin</h2>
           </div>
           
