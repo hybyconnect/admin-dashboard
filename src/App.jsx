@@ -77,7 +77,7 @@ const App = () => {
           <Route path="/reports" element={<Report />} />
           <Route path="/withdrawals" element={<Withdrawals />} />
           <Route path = "/profile" element = {<Profile />} />
-          <Route path="/settings" element={<Setting />} />
+          {/* <Route path="/settings" element={<Setting />} /> */}
           
 
         </Routes>
