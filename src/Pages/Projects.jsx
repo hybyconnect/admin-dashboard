@@ -175,7 +175,17 @@ const Projects = () => {
         {/* Header */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <h1 className="text-3xl font-bold ml-8 md:ml-0 text-yellow-500">Projects</h1>
-            <select
+            
+        </div>
+        <div className="mb-4 flex overflow-x-auto justify-between space-x-4 pb-2">
+          <button
+            className={`px-4 py-2 font-bold rounded-xl whitespace-nowrap ${
+              "All" === "All" ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700'
+            }`}
+          >
+            All ({projects.length})
+          </button>
+          <select
                 value={dropdownValue}
                 onChange={handleDropdownChange}
                 className=" ml-8 md:ml-0 border border-gray-300 rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
@@ -185,15 +195,6 @@ const Projects = () => {
                 <option value="Month">This Month</option>
                 <option value="Year">This Year</option>
             </select>
-        </div>
-        <div className="mb-4 flex overflow-x-auto space-x-4 pb-2">
-          <button
-            className={`px-4 py-2 font-bold rounded-xl whitespace-nowrap ${
-              "All" === "All" ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700'
-            }`}
-          >
-            All ({projects.length})
-          </button>
         </div>
 
         {/* Table */}

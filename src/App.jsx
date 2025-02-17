@@ -25,7 +25,7 @@ const LoadingScreen = () => {
     <div className="w-full flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-purple-100 via-white to-purple-100">
       {/* Logo */}
       <img
-        src={assets.logo}
+        src={assets.hyby}
         alt="Logo"
         className="w-52 mb-8 object-cover ml-2"
       />
