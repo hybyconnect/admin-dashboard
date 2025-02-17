@@ -204,6 +204,10 @@ const UsersPanel = () => {
       <div className="flex-1 p-8 bg-gray-200">
         <div className="mb-8 flex justify-between items-center">
           <h1 className="text-2xl md:text-3xl ml-8 md:ml-0 font-bold text-yellow-500"> Users Panel</h1>
+          <div className="flex items-center gap-4">
+            <img src={assets.profile} alt="Profile" className="w-10 h-10 rounded-full object-cover" />
+            <h2 className="text-lg font-semibold text-gray-700">Admin</h2>
+          </div>
           
         </div>
 

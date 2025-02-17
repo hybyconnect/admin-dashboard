@@ -170,7 +170,10 @@ const BannerPage = () => {
         {/* Header */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <h1 className="text-3xl font-bold text-yellow-500 mb-2 ml-8 md:ml-0 md:mb-0">Banners</h1>
-          
+          <div className="flex items-center gap-4">
+            <img src={assets.profile} alt="Profile" className="w-10 h-10 rounded-full object-cover" />
+            <h2 className="text-lg font-semibold text-gray-700">Admin</h2>
+          </div>
         </div>
 
         {/* Navigation Tabs */}

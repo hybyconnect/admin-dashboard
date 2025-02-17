@@ -185,7 +185,10 @@ const TransactionsPage = () => {
             <div className="flex-1 p-8 bg-gray-200">
                 <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <h1 className="text-3xl font-bold ml-8 md:ml-0 text-yellow-500">Reports</h1>
-                    
+                    <div className="flex items-center gap-4">
+                        <img src={assets.profile} alt="Profile" className="w-10 h-10 rounded-full object-cover" />
+                        <h2 className="text-lg font-semibold text-gray-700">Admin</h2>
+                    </div>
                 </div>
 
                 {/* Tabs */}
